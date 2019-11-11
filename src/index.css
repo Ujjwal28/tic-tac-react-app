@@ -1,13 +1,145 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  height: 100%;
+  background-image: url("./static/wallpaperflare.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.board-container {
+  margin-left: 20px;
+}
+.status {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  color: #191b1a;
+  text-shadow: 2px 2px rgb(247, 202, 6);
+}
+
+/* .square {
+  background: rgb(50, 205, 197);
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 42px;
+  margin-top: -6px;
+  padding: 0;
+  text-align: center;
+  width: 25%;
+} */
+
+.square {
+  background: rgb(50, 205, 197);
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 42px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 30%;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px black;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  margin: auto;
+  text-align: center;
+}
+
+.input-custom {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 12px #2ee59d;
+  transition: all 0.3s ease 2s;
+  outline: none;
+  padding: 2px;
+}
+
+.btn-custom {
+  background-color: #2ee59d;
+  border: none;
+  font-weight: bold;
+  height: 30px;
+  margin-top: 12px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #191b1a;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.btn-custom:focus {
+  outline: none;
+}
+.btn-custom:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px #191b1a;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.modal-content {
+  background-color: rgb(50, 205, 197) !important;
+  border-radius: 30px !important;
+}
+
+.btn-primary {
+  border-radius: 20px !important;
+}
+
+.container-custom {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+  overflow: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px black;
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
